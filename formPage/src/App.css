@@ -1,65 +1,126 @@
-body{
+body {
   background: #bec98e;
-
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-h2{
+h2 {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   color: #d82222;
 }
-.formmain{
+
+.formmain {
   background-color: rgb(139, 230, 116);
   width: 50%;
   height: auto;
-  margin: auto;
+  margin: 30px auto;
+  padding: 20px;
   overflow: hidden;
   border: 2px solid green;
-  border-radius: 1pc;
-  box-shadow: 1px 5px 10px 9px gray;
-
+  border-radius: 10px;
+  box-shadow: 1px 5px 10px 5px gray;
 }
-/* Grouped input styling (works for all text-like inputs) */
-.formfield input[type='radio'],
-.formfield input[type='checkbox']
-{
+
+fieldset {
+  border: none;
+}
+
+.formfield {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.formfield label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formfield input[type="text"],
+.formfield input[type="email"],
+.formfield input[type="tel"],
+.formfield input[type="url"],
+.formfield select {
   width: 80%;
-  height: 30px;
+  height: 35px;
   border: 2px solid green;
   border-radius: 6px;
   padding: 5px;
+  font-size: 16px;
 }
 
-/* Radio buttons */
-.formfield input[type='radio'],
-.formfield input[type='checkbox']  {
+.formfield textarea {
+
+
+  border: 2px solid green;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.formfield input[type="radio"],
+.formfield input[type="checkbox"] {
   width: auto;
+  height: auto;
   margin-right: 5px;
 }
 
-/* If you want radio buttons and labels in a row */
 .radio-group {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-left: 90px;
+  gap: 15px;
+  margin-left: 0;
 }
 
-.formfield{
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-}
-.formfield label{
- margin-bottom: 2px;
- 
-  
-}
-.formfield input{
+.formfield input[type="file"] {
   width: 80%;
-  height: 30px;
-  border: 2px solid green;
-  border-radius: 6px; 
+  background-color: white;
+  padding: 5px;
 }
 
+.formfield input[type="file"]::-webkit-file-upload-button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formfield input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: darkgreen;
+}
+
+.formfield button {
+  width: 40%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.formfield button:hover {
+  background-color: #218838;
+}
+
+.formfield button[type="reset"] {
+  background-color: #dc3545;
+}
+
+.formfield button[type="reset"]:hover {
+  background-color: #c82333;
+}
+
+/* Button group styling */
+.formfield:last-child {
+  flex-direction: row;
+  justify-content: space-around;
+}
