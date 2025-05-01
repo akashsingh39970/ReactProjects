@@ -1,36 +1,49 @@
-import { useState,useEffect } from "react"
+import { useState, useEffect } from "react";
 import Button from "./Button";
 
-
-
 function Joke() {
-    const [joke, setJoke] = useState("");
-    const [buttonClicked, setButtonClicked] = useState(false);
-    
+  const [joke, setJoke] = useState([]);
+  const [buttonClicked, setButtonClicked] = useState(false);
 
-    const fetchApi =() =>{
-        fetch("https://v2.jokeapi.dev/joke/Any").then((res)=> res.json()).then((data) => setJoke(data.joke));
-        
-      
-    };
+  const fetchApi = () => {
+    fetch("https://v2.jokeapi.dev/joke/Any")
+      .then((res) => res.json())
+      .then((data) => {
+        let formattedJoke = "";
 
-    useEffect(() => {
-        if(buttonClicked){
-            fetchApi();
-            setButtonClicked(false);
+        if (data.type === "single") {
+          formattedJoke = data.setup;
+          console.log("single");
+        } else if (data.type === "twopart") {
+          formattedJoke = `${data.setup} - ${data.delivery}`;
         }
-    
-    }, [buttonClicked])
-   
-  return (  
-   
-        <div>
-            <h2>here is your joke</h2>
-            <h3>{joke}</h3>
-            <Button callApi={()=> {setButtonClicked(true)}}/>
 
-        </div>
-  )
+        setJoke([formattedJoke]); // store in array for consistent rendering
+      })
+      .catch((error) => {
+        console.error("Error fetching joke:", error);
+        setJoke(["Failed to load joke."]);
+      });
+  };
+
+  useEffect(() => {
+    if (buttonClicked) {
+      fetchApi();
+      setButtonClicked(false);
+    }
+  }, [buttonClicked]);
+
+  return (
+    <div>
+      <h2>Here is your joke</h2>
+      <ul>
+        {joke.map((j, index) => (
+          <li key={index}>{j}</li>
+        ))}
+      </ul>
+      <Button callApi={() => setButtonClicked(true)} />
+    </div>
+  );
 }
 
-export default Joke
+export default Joke;
