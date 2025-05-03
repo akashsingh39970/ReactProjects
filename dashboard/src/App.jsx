@@ -1,8 +1,11 @@
-import React from 'react'
+
+import Home from './assets/Pages/home/Home';
 
 function App() {
   return (
-    <div>hello</div>
+    <div className='app'>
+      <Home />
+    </div>
   )
 }
 
