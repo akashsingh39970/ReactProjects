@@ -1,10 +1,11 @@
 import Sidebar from '../../../components/sidebar/Sidebar';
 import './home.scss';
+
 const Home = () => {
   return (
-    <div className='home flex flex-2 bg-red-500'>
+    <div className='home flex '>
       <Sidebar/>
-      <div className='homeContainer   '>container</div>
+      <div className='homeContainer flex-6 '>container</div>
     </div>
     
   )

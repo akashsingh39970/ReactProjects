@@ -1,0 +1,74 @@
+.sidebar{
+    border: 0.5px solid rgb(230,227,227);
+    .top{
+        height: 50px;
+    
+        .logo{
+            font-size: 20px;
+            color: rgb(61, 85, 218);
+        }
+    }
+
+    hr{
+        height: 0;
+        border: 0.5px solid rgb(230,227,227);
+    }
+  .title{
+    font-size: 10px;
+    font-weight: bold;
+    color: #999;
+    margin-top: 10px;
+  }
+  li{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: rgb(230,227,227);
+    }
+    svg{
+        font-size: 17px;
+        margin-right: 5px;
+        color: rgb(61, 85, 218);
+    }
+    span{
+        font-size: 12px;
+        font-weight: 600;
+        color: #888;
+        margin-left: 10px;
+    }   
+
+
+  }
+
+  .bottom{
+
+    .colorOptions{
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(61, 85, 218);
+        cursor: pointer;
+
+        &:nth-child(1){
+            background-color: whitesmoke;
+        }
+
+        &:nth-child(2){
+            background-color: #333;
+        }
+
+        &:nth-child(3){
+            background-color: darkblue;
+        }
+        
+
+    }
+  }
+
+
+}
+
+

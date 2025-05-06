@@ -1,26 +1,84 @@
 import './sidebar.scss';
+import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
+import PersonIcon from '@mui/icons-material/Person';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import SettingsIcon from '@mui/icons-material/Settings';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function Sidebar() {
   return (
-    <div className='sidebar flex  bg-orange-50'>
-      <div className='top'><span className='logo'>lamaadmin</span></div>
-      <div className='center'>
-        <ul>
+    <div className='sidebar flex-1 min-h-screen bg-white'>
+      <div className='top flex  items-center justify-center '><span className='logo font-bold '>lamaadmin</span></div>
+      <hr />
+      <div className='center ps-2'>
+        <ul className='list-none m-0 p-0'>
+            <p className='title'>MAIN</p>
           <li>
+            <DashboardCustomizeIcon/>
             <span>Dashborad</span>
           </li>
+            <p className='title'>LISTS</p>
           <li>
-            <span>Dashborad</span>
+            <PersonIcon/>
+            <span>Users</span>
           </li>
           <li>
-            <span>Dashborad</span>
+            <Inventory2Icon/>
+            <span>Products</span>
           </li>
           <li>
-            <span>Dashborad</span>
+            <AddShoppingCartIcon/>
+            <span>Orders</span>
+          </li>
+          <li>
+            <LocalShippingIcon/>
+            <span>Delivery</span>
+          </li>
+          <p className='title'>USEFUL LINKS</p>
+          <li>
+            <QueryStatsIcon/>
+            <span>Stats</span>
+          </li>
+          <li>
+            <NotificationsNoneIcon/>
+            <span>Notifications</span>
+          </li>
+          <p className='title'>SERVICE</p>
+          <li>
+            <HealthAndSafetyIcon/>
+            <span>System Health</span>
+          </li>
+          <li>
+            <PsychologyIcon/>
+            <span>Logs</span>
+          </li>
+          <li>
+            <SettingsIcon/>
+            <span>Settings</span>
+          </li>
+          <p className='title'>USER</p>
+          <li>
+            <AccountCircleOutlinedIcon/>
+            <span>Profile</span>
+          </li>
+          <li>
+            <LogoutIcon/> 
+            <span>Logout</span>
           </li>
         </ul>
       </div>
-      <div className='bottom'>color options</div>
+      <div className='bottom flex m-10 items-center'>
+        <div className='colorOptions'></div>
+        <div className='colorOptions'></div>
+        {/* <div className='colorOptions'></div> */}
+      </div>
     </div>
   )
 }
