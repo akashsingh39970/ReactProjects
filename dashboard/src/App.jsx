@@ -1,6 +1,11 @@
 
 import Home from './assets/Pages/home/Home';
 import Login from './assets/Pages/login/Login';
+import List from './assets/Pages/list/List';
+import Single from './assets/Pages/Single/Single';
+import New from './assets/Pages/New/New';
+
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -10,7 +15,17 @@ function App() {
         <Routes>
           <Route path='/'>
             <Route index element={<Home/>}/>
-            <Route path='/login' element={<Login/>}/>
+            <Route path='login' element={<Login/>}/>
+            <Route path='users'>
+              <Route index element={<List/>}/>
+              <Route path=':userId' element={<Single/>}/>
+              <Route path='new' element={<New/>}/>
+            </Route>
+            <Route path='product'>
+              <Route index element={<List/>}/>
+              <Route path=':productId' element={<Single/>}/>
+              <Route path='new' element={<New/>}/>
+            </Route>
 
           </Route>
         </Routes>

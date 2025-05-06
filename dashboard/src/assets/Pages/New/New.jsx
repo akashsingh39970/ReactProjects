@@ -1,11 +1,11 @@
 import React from 'react'
 
-function List() {
+function New() {
   return (
     <div>
-      list
+      new
     </div>
   )
 }
 
-export default List
+export default New

@@ -1,11 +1,11 @@
 import React from 'react'
 
-function List() {
+function Single() {
   return (
     <div>
-      list
+        singles      
     </div>
   )
 }
 
-export default List
+export default Single
