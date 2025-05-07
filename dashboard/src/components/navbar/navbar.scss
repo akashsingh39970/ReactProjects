@@ -1,0 +1,27 @@
+.navbar{
+    height: 50px;
+    border-bottom: 0.5px solid rgb(230,227,227);
+    font-size: 14px;
+    color: #555;
+    
+    .wrapper{
+        width: 100%;
+        padding: 20px;
+
+        .search{
+            border: 0.5px solid lightgrey;
+            padding: 3px;
+       
+
+            .input{
+                border: none;
+                outline: none;
+                background: transparent;
+
+                &::placeholder{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
