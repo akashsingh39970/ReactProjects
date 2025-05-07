@@ -6,6 +6,7 @@ import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlin
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
+import avatar from '../../assets/Images/avatar.jpg';
 function Navbar() {
   return (
     <div className='navbar flex items-center'>
@@ -15,29 +16,35 @@ function Navbar() {
           <SearchOutlinedIcon/>
         </div>
         <div className='items flex items-center'>
-          <div className='item flex items-center my-6'>
-            <LanguageOutlinedIcon/>
+          <div className='item '>
+            <LanguageOutlinedIcon className='icon'/>
             English
           </div>
           <div className='item'>
-            <DarkModeOutlinedIcon/>
-            English
+            <DarkModeOutlinedIcon className='icon'/>
+            
           </div>
           <div className='item'>
-            <FullscreenExitOutlinedIcon/>
-            English
+            <FullscreenExitOutlinedIcon className='icon'/>
+            
           </div>
           <div className='item'>
-            <NotificationsOutlinedIcon/>
-            English
+            <NotificationsOutlinedIcon className='icon'/>
+            <div className='counter'>1</div>
+            
           </div>
           <div className='item'>
-            <ChatBubbleOutlineOutlinedIcon/>
-            English
+            <ChatBubbleOutlineOutlinedIcon className='icon'/>
+            <div className='counter'>2</div>
+            
           </div>
           <div className='item'>
-            <FormatListBulletedOutlinedIcon/>
-            English
+            <FormatListBulletedOutlinedIcon className='icon'/>
+            
+          </div>
+          <div className='item'>
+            <img src={avatar}
+             alt="" className='avatar' />              
           </div>
         </div>
       </div>

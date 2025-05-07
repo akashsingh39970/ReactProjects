@@ -1,9 +1,9 @@
 
-import Home from './assets/Pages/home/Home';
-import Login from './assets/Pages/login/Login';
-import List from './assets/Pages/list/List';
-import Single from './assets/Pages/Single/Single';
-import New from './assets/Pages/New/New';
+import Home from './Pages/home/Home';
+import Login from './Pages/login/Login';
+import List from './Pages/list/List';
+import Single from './Pages/Single/Single';
+import New from './Pages/New/New';
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
