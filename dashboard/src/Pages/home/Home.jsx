@@ -11,7 +11,8 @@ const Home = () => {
       <Sidebar/>
       <div className='homeContainer flex-[6] '>
         <Navbar/>
-        <div className='widgets'>
+        <div className='widgets flex p-[20px] gap-[20px]'>
+          <Widgets/>  
           <Widgets/>  
           <Widgets/>  
           <Widgets/>  
