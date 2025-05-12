@@ -1,0 +1,13 @@
+.listContainer{
+    box-shadow: 0px 8px 5px 0px rgba(163,153,153,0.75);
+    -webkit-box-shadow: 0px 8px 5px 0px rgba(163,153,153,0.75);
+    -moz-box-shadow: 0px 8px 5px 0px rgba(163,153,153,0.75);
+    padding: 20px;
+    margin: 20px;
+
+    .listTitle{
+        font-weight: 500;
+        color: gray;
+        margin-bottom: 15px;
+    }
+}

@@ -7,6 +7,7 @@ import Widgets from '../../components/widgets/Widgets';
 
 
 import './home.scss';
+import List from '../../components/table/Table';
 
 const Home = ({type}) => {
 
@@ -24,7 +25,11 @@ const Home = ({type}) => {
         <div className="charts flex py-[5px] px-[20px]  gap-[20px] "> 
           <Featured />
           <Chart/>
-
+       
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transactions</div>
+          <List/>
         </div>
       </div>
     </div>
