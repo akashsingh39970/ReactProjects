@@ -27,8 +27,8 @@ const Home = ({type}) => {
           <Chart/>
        
         </div>
-        <div className="listContainer">
-          <div className="listTitle">Latest Transactions</div>
+        <div className="tableContainer">
+          <div className="tableTitle">Latest Transactions</div>
           <List/>
         </div>
       </div>
