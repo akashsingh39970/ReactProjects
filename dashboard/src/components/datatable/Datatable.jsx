@@ -6,7 +6,7 @@ import { userColumns, userRows } from '../datatablesource/Datatablesource';
 
 
 
-const paginationModel = { page: 0, pageSize: 5 };
+const paginationModel = { page: 0, pageSize: 10 };
 
 const Datatable = () => {
 
@@ -22,7 +22,7 @@ const Datatable = () => {
   ]
   return (
     <div className="datatable">
-         <Paper sx={{ height: 400, width: '100%' }}>
+         <Paper sx={{ height: 500, width: '100%' }}>
       <DataGrid
         rows={userRows}
         columns={userColumns.concat(actionColumn)}

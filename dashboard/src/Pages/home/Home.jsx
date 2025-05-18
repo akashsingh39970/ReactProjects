@@ -24,7 +24,7 @@ const Home = ({type}) => {
         </div>
         <div className="charts flex py-[5px] px-[20px]  gap-[20px] "> 
           <Featured />
-          <Chart/>
+          <Chart aspect={2/1} title='Last 6 Month (Revenue)'/>
        
         </div>
         <div className="tableContainer">

@@ -1,7 +1,7 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Datatable from "../../components/datatable/Datatable";
-function List() {
+const List = () => {
   return (
     <div className="list flex w-[100%]">
       <Sidebar/>
@@ -13,4 +13,4 @@ function List() {
   )
 }
 
-export default List
+export default List;
