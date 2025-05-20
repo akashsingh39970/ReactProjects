@@ -11,65 +11,76 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
   return (
     <div className='sidebar flex-1 min-h-screen bg-white'>
-      <div className='top flex  items-center justify-center '><span className='logo font-bold '>lamaadmin</span></div>
+      <div className='top flex  items-center justify-center '>
+        <Link to='/'><span className='logo font-bold '>lamaadmin</span></Link>
+      </div>
       <hr />
       <div className='center ps-2'>
         <ul className='list-none m-0 p-0'>
-            <p className='title'>MAIN</p>
+          <p className='title'>MAIN</p>
+          <Link to='/'>
+            <li>
+              <DashboardCustomizeIcon />
+
+              <span>Dashborad</span>
+            </li>
+          </Link>
+
+          <p className='title'>LISTS</p>
+          <Link to='/users'>
           <li>
-            <DashboardCustomizeIcon/>
-            <span>Dashborad</span>
-          </li>
-            <p className='title'>LISTS</p>
-          <li>
-            <PersonIcon/>
+            <PersonIcon />
             <span>Users</span>
           </li>
+          </Link>
+          <Link to='/product'>
           <li>
-            <Inventory2Icon/>
-            <span>Products</span>
+            <Inventory2Icon />
+              <span>Product</span>
           </li>
+          </Link>
           <li>
-            <AddShoppingCartIcon/>
+            <AddShoppingCartIcon />
             <span>Orders</span>
           </li>
           <li>
-            <LocalShippingIcon/>
+            <LocalShippingIcon />
             <span>Delivery</span>
           </li>
           <p className='title'>USEFUL LINKS</p>
           <li>
-            <QueryStatsIcon/>
+            <QueryStatsIcon />
             <span>Stats</span>
           </li>
           <li>
-            <NotificationsNoneIcon/>
+            <NotificationsNoneIcon />
             <span>Notifications</span>
           </li>
           <p className='title'>SERVICE</p>
           <li>
-            <HealthAndSafetyIcon/>
+            <HealthAndSafetyIcon />
             <span>System Health</span>
           </li>
           <li>
-            <PsychologyIcon/>
+            <PsychologyIcon />
             <span>Logs</span>
           </li>
           <li>
-            <SettingsIcon/>
+            <SettingsIcon />
             <span>Settings</span>
           </li>
           <p className='title'>USER</p>
           <li>
-            <AccountCircleOutlinedIcon/>
+            <AccountCircleOutlinedIcon />
             <span>Profile</span>
           </li>
           <li>
-            <LogoutIcon/> 
+            <LogoutIcon />
             <span>Logout</span>
           </li>
         </ul>

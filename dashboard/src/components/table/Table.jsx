@@ -111,7 +111,7 @@ const List = () => {
               key={row.id}
            
             >
-              <TableCell >
+              <TableCell className='tableCell' >
                 {row.id}
               </TableCell>
               <TableCell className='tableCell'>

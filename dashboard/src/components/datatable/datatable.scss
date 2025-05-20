@@ -1,73 +1,111 @@
-    .datatable{
-        height: 600px;
-        padding: 20px;
-        
-        
-        
-        .cellWithImg{
-            font-size: small;
-            .cellImg{
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                object-fit: cover;
-                margin-right: 10px;
-            }
-            
+    .datatable {
+      height: 600px;
+      padding: 20px;
+
+      .datatableTitle {
+        width: 100%;
+        font-style: 24px;
+        color: gray;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .link {
+          text-decoration: none;
+          color: green;
+          font-size: 16px;
+          font-weight: 400;
+          border: 1px solid green;
+          padding: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: green;
+            color: white;
+          }
+
+
+
+        }
+      }
+
+
+
+      .cellWithImg {
+        font-size: small;
+
+        .cellImg {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 10px;
         }
 
-        .celWithStatus{
-            font-size: small;
-            .status{
-                padding: 5px;
-            border-radius: 5px;
+      }
 
-                &.approved{
-                    background-color: #d4edda;
-                    color: #155724;
-                }
-                &.pending{
-                    background-color: #fff3cd;
-                    color: #856404;
-                }
-                &.declined{
-                    background-color: #f8d7da;
-                    color: #721c24;
-                }
-            }
+      .celWithStatus {
+        font-size: small;
+
+        .status {
+          padding: 5px;
+          border-radius: 5px;
+
+          &.approved {
+            background-color: #d4edda;
+            color: #155724;
+          }
+
+          &.pending {
+            background-color: #fff3cd;
+            color: #856404;
+          }
+
+          &.declined {
+            background-color: #f8d7da;
+            color: #721c24;
+          }
         }
-        .cellAction {
-//    display: flex;
-  align-items: center;
-  justify-content: flex-start;
-//   gap: 10px;
-  font-size: small;
-  ;
-  width: auto;
+      }
 
-  .viewButton,
-  .deleteButton {
-    // display: inline-block;        // ✅ Apply it here
-    align-items: center;
-    justify-content: center;
-    padding: 5px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    cursor: pointer;
-    width: auto !important; // ✅ Set width to auto
-  }
+      .cellAction {
+        //    display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        //   gap: 10px;
+        font-size: small;
 
-  .viewButton {
-    background-color: #155724;
-    color: white;
-  }
+        width: auto;
 
-  .deleteButton {
-    background-color: #f8d7da;
-    color: #721c24;
-    margin-left: 10px;
-    
-  }
-}
+        .viewButton,
+        .deleteButton {
+          // display: inline-block;        // ✅ Apply it here
+          align-items: center;
+          justify-content: center;
+          padding: 5px 10px;
+          border-radius: 5px;
+          white-space: nowrap;
+          cursor: pointer;
+          width: auto !important;
+          
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .viewButton {
+          background-color: #155724;
+          color: white;
+        }
+
+        .deleteButton {
+          background-color: #eb8992;
+          color: #721c24;
+          margin-left: 10px;
+
+        }
+      }
 
     }
