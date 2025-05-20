@@ -116,23 +116,40 @@
       }
     }
   }
+.datatable {
+  .datagrid {
+    background-color: #111;
+    color: gray;
+    border: none;
 
-  .datatable {
-    .datagrid {
-      background-color: #111;
+    // ✅ Column headers
+    .MuiDataGrid-columnHeaders {
+      background-color: #f31a1a; // Change this to whatever header bg you want
+      color: #303b39; // Header text color
+      font-weight: bold;
+    }
+
+    // ✅ Row hover effect
+    .MuiDataGrid-row:hover {
+      background-color: #141414; // Darker gray on hover
+    }
+
+    // Optional alternating row color (zebra stripes)
+    .MuiDataGrid-row:nth-of-type(even) {
+      background-color: #151515;
+    }
+
+    // ✅ Style buttons and status inside cells
+    .viewButton,
+    .deleteButton,
+    .cellWithStatus {
       color: gray;
       border: none;
-
-      .viewButton,
-      .deleteButton,
-      .cellWithStatus {
-        color: gray;
-        border: none;
-        background-color: #111;
-        
-      }
+      background-color: #111;
     }
   }
+}
+
 
   input{
       background-color: transparent;
