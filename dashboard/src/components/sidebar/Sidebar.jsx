@@ -12,8 +12,11 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { DarkModeContext } from '../../utility/context/DarkModeContext';
 
 function Sidebar() {
+  const {dispatch} = useContext(DarkModeContext);
   return (
     <div className='sidebar flex-1 min-h-screen bg-white'>
       <div className='top flex  items-center justify-center '>
@@ -86,8 +89,8 @@ function Sidebar() {
         </ul>
       </div>
       <div className='bottom flex m-10 items-center'>
-        <div className='colorOptions'></div>
-        <div className='colorOptions'></div>
+        <div className='colorOptions' onClick={()=> dispatch({type:'Light'})}></div>
+        <div className='colorOptions' onClick={()=> dispatch({type:'Dark'})}></div>
         {/* <div className='colorOptions'></div> */}
       </div>
     </div>

@@ -7,7 +7,10 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
 import avatar from '../../assets/Images/avatar.jpg';
+import { useContext } from 'react';
+import { DarkModeContext } from '../../utility/context/DarkModeContext';
 function Navbar() {
+  const {dispatch} = useContext(DarkModeContext);
   return (
     <div className='navbar flex items-center'>
       <div className='wrapper flex items-center justify-between'>
@@ -21,13 +24,13 @@ function Navbar() {
             English
           </div>
           <div className='item'>
-            <DarkModeOutlinedIcon className='icon'/>
+            <DarkModeOutlinedIcon className='icon' onClick={()=> dispatch({type:'Toogle'})}/>
             
           </div>
           <div className='item'>
             <FullscreenExitOutlinedIcon className='icon'/>
             
-          </div>
+          </div>  
           <div className='item'>
             <NotificationsOutlinedIcon className='icon'/>
             <div className='counter'>1</div>

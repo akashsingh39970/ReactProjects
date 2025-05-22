@@ -9,11 +9,16 @@ import './globalstyle/darktheme/darktheme.scss';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { userInputs, productInputs } from './components/formsource/Formsource';
-import { LinkContext } from './utility/context/Context';
+import { LinkContext } from './utility/context/LinkContext';
+import { useContext } from 'react';
+import { DarkModeContext } from './utility/context/DarkModeContext';
 
 const App = () => {
+
+  const {darkMode} = useContext(DarkModeContext)
+
   return (
-    <div className='app  dark'>
+    <div className={darkMode ? 'app dark': 'dark'}>
       <BrowserRouter>
         <Routes>
           <Route path='/'>
