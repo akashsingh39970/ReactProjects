@@ -17,15 +17,19 @@ const Datatable = () => {
   const link = useLink();
 
   const handelDelete = (id) =>{
-    setData( data.filter(item => item.id !== id))
-    console.log(id);  
+   
+    setData( data.map(item => item.id !== id ))
+   
+    
   }
   
 
   const actionColumn = [
     {
       field: 'action', headerName: 'Action', width: 150, renderCell: ( praams) => {
+          // console.log(praams.id);
         return (
+        
           <div className="cellAction">
             <Link to='/users/single'>
               <span className="viewButton">View</span>
