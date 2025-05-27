@@ -18,7 +18,7 @@ const Datatable = () => {
 
   const handelDelete = (id) =>{
    
-    setData( data.map(item => item.id !== id ))
+    setData( data.filter(item => item.id !== id ))
    
     
   }

@@ -11,7 +11,7 @@ const List = () => {
         <Datatable />
       </div>
     </div>
-  )
+  ) 
 }
 
 export default List; 
