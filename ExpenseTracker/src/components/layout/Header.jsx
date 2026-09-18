@@ -2,8 +2,8 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='w-100  bg-danger'>
-      header
+    <div className=''>
+      <h2>Dashboard</h2>
     </div>
   )
 }

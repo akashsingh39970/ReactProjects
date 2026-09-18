@@ -2,3 +2,13 @@
     margin: 0;
     padding: 0;
 }
+
+:root{
+
+    /* sidenavarbar styling */
+    --side-navbar-bg-color: rgb(18, 18, 50);
+    --primary-text-color: #ffff;
+
+
+
+}
