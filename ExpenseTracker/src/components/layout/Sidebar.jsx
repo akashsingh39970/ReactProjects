@@ -1,13 +1,13 @@
 import React from 'react'
 import './Sidebar.css'
 import logo from '../../assets/images/logo.png'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import HomeIcon from '@mui/icons-material/Home';
 
 const Sidebar = () => {
   return (
     <aside className='sidebar-container d-flex flex-column '>
-      
+
 
       {/* side bar header  */}
       <div className=' sidebar-header '>
@@ -26,16 +26,20 @@ const Sidebar = () => {
       {/* side bar options */}
       <div className="sidebar-options d-flex flex-column m-0 p-2">
 
-       <Link to='#href'>
-      <HomeIcon sx={{color: "#ffff"}}/>
-       </Link>    
-       <span>Dashboard</span>
+        <div className="options-container">
+          <Link to='#href'>
+            <HomeIcon sx={{ color: "rgb(228, 228, 228);", fontSize : "1.9rem" }} />
+          </Link>
+          <span>Dashboard</span>
+        </div>
 
-      
+
+
+
       </div>
 
 
-       
+
 
     </aside>
   )
