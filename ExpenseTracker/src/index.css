@@ -9,6 +9,7 @@
     --side-navbar-bg-color: rgb(18, 18, 50);
     --primary-text-color: #ffff;
 
-
+    /* sidebar option hover styling */
+    --sidebar-option-container-hover: rgb(33, 33, 90);
 
 }
