@@ -1,9 +1,10 @@
 import React from 'react'
+import SummaryCards from './dashboard/SummaryCards'
 
 const Content = () => {
   return (
     <div>
-      <h1>welcome</h1>
+      <SummaryCards/>
     </div>
   )
 }
