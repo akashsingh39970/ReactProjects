@@ -1,0 +1,8 @@
+.transaction-form{
+    width: 100% ;
+    background-color: var(--primary-text-color);
+     min-height: 50vh;
+}
+.transaction-form h2{
+    font-weight: 500;
+}

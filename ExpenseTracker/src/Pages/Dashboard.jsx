@@ -11,7 +11,7 @@ const Dashboard = () => {
 
 
       {/* Rightside */}
-      <div className="flex-grow-1 p-4">
+      <div className="flex-grow-1 ">
       <Header/>
       <Content/>
       </div>
