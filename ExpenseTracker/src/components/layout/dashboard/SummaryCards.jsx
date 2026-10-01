@@ -6,7 +6,7 @@ import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 const SummaryCards = () => {
     return (
-        <div className="summary-cards row g-4">
+        <div className="summary-cards row ">
 
             {/* Income */}
             <div className="col-12 col-md-4">

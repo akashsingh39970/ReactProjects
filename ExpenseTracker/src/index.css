@@ -14,6 +14,8 @@ body{
 
 :root{
 
+
+
     /* sidenavarbar styling */
     --side-navbar-bg-color: #000047;
     --primary-text-color: #ffff;
@@ -30,6 +32,9 @@ body{
     --credit-in-icon-color:#E6FFE6;
     --credit-out-icon-color: #FFE6E6;
     --credit-balance-icon-color: #E6E6FF;
+
+    /* transaction form styling */
+    --transaction-form-bg-color: #f8f8f8;
 
 
 
