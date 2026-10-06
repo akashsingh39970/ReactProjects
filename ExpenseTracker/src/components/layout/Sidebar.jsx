@@ -13,7 +13,7 @@ const Sidebar = () => {
 
 
       {/* side bar header  */}
-      <div className=' sidebar-header '>
+      <Link className=' sidebar-header ' to="/">
 
         <div className="main-logo">
           <img src={logo} alt="logo" />
@@ -24,24 +24,23 @@ const Sidebar = () => {
         </div>
 
 
-      </div>
+      </Link>
 
       {/* side bar options */}
       <div className="sidebar-options d-flex flex-column m-0 p-2">
 
-        <div className="options-container">
-          <Link to='#href'>
+        <Link className="options-container" to="/">
+        
             <HomeIcon sx={{ color: "rgb(228, 228, 228);", fontSize : "1.8rem" }} />
-          </Link>
+          
           <span>Dashboard</span>
-        </div>
+        </Link>
 
-         <div className="options-container">
-          <Link to='#href'>
+         <Link className="options-container" to='/transactions'>
             <MenuIcon sx={{ color: "rgb(228, 228, 228);", fontSize : "1.8rem" }} />
-          </Link>
+          
           <span>Transaction</span>
-        </div>
+        </Link>
 
           <div className="options-container">
           <Link to='#href'>

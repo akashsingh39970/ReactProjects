@@ -4,12 +4,17 @@ import './index.css'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
+import { TransactionContextProvider } from './components/Context/Context.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <TransactionContextProvider>
+        
         <App />
 
-    </BrowserRouter>
+  
+
+    </TransactionContextProvider>
+  
   </StrictMode>,
 )

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './TransactionList.css';
+import { TransactionContext } from '../Context/Context';
 
 const TransactionList = () => {
+ 
+    const {transaction} = useContext(TransactionContext);
+
   return (
     <div className="transaction-list-container">
 
@@ -23,13 +27,32 @@ const TransactionList = () => {
                 </thead>
 
                 <tbody>
-                    <tr>
+                    {
+                        transaction && transaction.length > 0 ? (
+                            transaction.map((item, index) =>{
+                                return(
+                                    <tr key={item.id}>
+                                        <td>{index + 1}</td>
+                                        <td>{item.title}</td>
+                                        <td>{item.category}</td>
+                                        <td>{item.amount}</td>
+                                        <td>{item.type}</td>
+                                    </tr>
+                        )}
+                    ))             :
+                    (
+                        <tr>
+                            <td colSpan="5">No transactions found.</td>
+                        </tr>
+                    )
+                    }
+                    {/* <tr>
                         <td>1</td>
                         <td>Salary</td>
                         <td>Income</td>
                         <td>$5000</td>
                         <td>Credit</td>
-                    </tr>
+                    </tr> */}
                 </tbody>
 
             </table>
