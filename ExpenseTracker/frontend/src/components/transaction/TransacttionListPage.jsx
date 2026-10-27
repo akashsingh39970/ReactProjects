@@ -49,6 +49,10 @@ const TransacttionListPage = () => {
 
       {/* transaction list */}
       <div className="transaction-list-container">
+
+        <Table>
+          
+        </Table>
         
       </div>
 
