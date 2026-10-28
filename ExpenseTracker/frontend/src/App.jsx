@@ -1,5 +1,5 @@
 import React from 'react'
-import Dashboard from './Pages/Dashboard'
+import Dashboard from './pages/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import TransacttionListPage from './components/transaction/TransacttionListPage'
 import Header from './components/layout/Header'
